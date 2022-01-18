@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 class DBSample(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        uic.loadUi('main.ui', self)
         self.connection = sqlite3.connect("coffee.sqlite")
         self.select_data()
 
