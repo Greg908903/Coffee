@@ -1,15 +1,16 @@
 import sqlite3
 import sys
 
-from PyQt5 import uic
+from main_ui import main_Ui
+from addEditCoffeeForm_ui import addEditCoffeeForm_Ui
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
 
 
-class DBSample(QMainWindow):
+class DBSample(QMainWindow, main_Ui):
     def __init__(self):
         super().__init__()
-        uic.loadUi('main.ui', self)
+        self.setupUi(self)
         self.connection = sqlite3.connect("coffee.sqlite")
         self.pushButton.clicked.connect(self.openForm)
         self.read_data()
@@ -36,10 +37,10 @@ class DBSample(QMainWindow):
         self.connection.close()
 
 
-class EditForm(QMainWindow):
+class EditForm(QMainWindow, addEditCoffeeForm_Ui):
     def __init__(self, con, cur):
         QMainWindow.__init__(self)
-        uic.loadUi('addEditCoffeeForm.ui', self)
+        self.setupUi(self)
         self.cur = cur
         self.con = con
         self.select_data()
