@@ -16,6 +16,18 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Редактировать БД</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QTableWidget" name="tableWidget"/>
     </item>
    </layout>
@@ -26,7 +38,7 @@
      <x>0</x>
      <y>0</y>
      <width>948</width>
-     <height>21</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
