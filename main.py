@@ -11,7 +11,7 @@ class DBSample(QMainWindow, main_Ui):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.connection = sqlite3.connect("coffee.sqlite")
+        self.connection = sqlite3.connect("data/coffee.sqlite")
         self.pushButton.clicked.connect(self.openForm)
         self.read_data()
 
